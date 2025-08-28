@@ -2,7 +2,7 @@
 
 In this video, I walk you through setting up the Home Assistant Voice PE device from start to finish — adding devices, exploring the menus, using templates, creating automations, and even a demo with LED control.
 
-▶️ [Watch the video here](     )  
+▶️ [Watch the video here](https://youtu.be/nS5a4xbTdxA)  
 
 ### 💡 LED Automation files used in this video
 
