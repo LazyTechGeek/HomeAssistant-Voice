@@ -6,9 +6,9 @@ In this video, I walk you through setting up the Home Assistant Voice PE device 
 
 ### 💡 LED Automation files used in this video
 
-- **[Basic LED Automation](https://github.com/LazyTechGeek/HomeAssistant-Frigate/blob/main/frigate_ip_cam_only.yaml)**
-- **[KITT LED Automation](https://github.com/LazyTechGeek/HomeAssistant-Frigate/blob/main/frigate_usb_and_ip_cam.yaml)**
+- **[Basic LED Automation](https://github.com/LazyTechGeek/HomeAssistant-Voice/blob/main/Basic_LED_Automation.yaml)**
+- **[KITT LED Automation](https://github.com/LazyTechGeek/HomeAssistant-Voice/blob/main/KITT_LED_Automation.yaml)**
 
 ### 🌡️ Template used for Weather with Temperature:
 
-- **[Temperature YAML](https://github.com/LazyTechGeek/HomeAssistant-Frigate/blob/main/frigate_ip_cam_only.yaml)**
+- **[Weather with Temperature](https://github.com/LazyTechGeek/HomeAssistant-Voice/blob/main/weather-temperature.yaml)**
