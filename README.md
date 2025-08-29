@@ -9,6 +9,6 @@ In this video, I walk you through setting up the Home Assistant Voice PE device 
 - **[Basic LED Automation](https://github.com/LazyTechGeek/HomeAssistant-Voice/blob/main/Basic_LED_Automation.yaml)**
 - **[KITT LED Automation](https://github.com/LazyTechGeek/HomeAssistant-Voice/blob/main/KITT_LED_Automation.yaml)**
 
-### 🌡️ Template used for Weather with Temperature:
+### 🌡️ Template used for weather with temperature:
 
 - **[Weather with Temperature](https://github.com/LazyTechGeek/HomeAssistant-Voice/blob/main/weather-temperature.yaml)**
