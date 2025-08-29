@@ -1,0 +1,87 @@
+alias: KITT LED Automation 
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: listening
+    id: listening
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: processing
+    id: processing
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: responding
+    id: responding
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: idle
+    id: idle
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id:
+              - listening
+            enabled: true
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: red
+              effect: Solid
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+      - conditions:
+          - condition: trigger
+            id:
+              - processing
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: red
+              effect: Chase
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+      - conditions:
+          - condition: trigger
+            id:
+              - responding
+        sequence:
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 1
+              milliseconds: 100
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: red
+              effect: NoiseMove
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+      - conditions:
+          - condition: trigger
+            id:
+              - idle
+            enabled: true
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              effect: Solid
+            target:
+              entity_id: light.voiceled
+            enabled: false
+          - action: light.turn_off
+            metadata: {}
+            data: {}
+            target:
+              entity_id: light.voiceled
+mode: single
