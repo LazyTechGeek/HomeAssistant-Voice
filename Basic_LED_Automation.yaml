@@ -1,0 +1,71 @@
+alias: Basic LED Automation
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: listening
+    id: listening
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: processing
+    id: processing
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: responding
+    id: responding
+  - trigger: state
+    entity_id:
+      - assist_satellite.home_assistant_voice_09c74b_assist_satellite
+    to: idle
+    id: idle
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id:
+              - listening
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: green
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+      - conditions:
+          - condition: trigger
+            id:
+              - processing
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: orange
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+      - conditions:
+          - condition: trigger
+            id:
+              - responding
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: red
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+      - conditions:
+          - condition: trigger
+            id:
+              - idle
+        sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              color_name: white
+            target:
+              device_id: bda1c5f49ae5e22a8220c41d698c004c
+mode: single
