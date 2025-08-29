@@ -1,0 +1,5 @@
+- sensor:
+    - name: "Weather"
+      unique_id: weather_summary
+      state: >
+        {{ state_attr('weather.home', 'temperature') | round(0) }}{{ state_attr('weather.home', 'temperature_unit') }} and {{ states('weather.home') }}
